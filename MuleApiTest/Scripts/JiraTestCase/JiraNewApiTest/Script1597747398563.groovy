@@ -17,5 +17,5 @@ import internal.GlobalVariable as GlobalVariable
 
 response = WS.sendRequest(findTestObject('User/NewHitTheApi'))
 
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 400)
 

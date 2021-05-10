@@ -51,7 +51,7 @@ testSuitePath=$(echo $testSuitePath)
 testSuitePath=${testSuitePath%$'\r'}
 
 cd /opt/Katalon_Studio_Engine_Linux_64-7.6.2
-./katalonc -noSplash -runMode=console -projectPath="$WORKSPACE/$projectPath" -reportFolder="/var/lib/jenkins/workspace/PublishReportToJira/Reports/$i" -reportFileName="report" -retry=0 -testSuitePath="$testSuitePath" -executionProfile="default" -browserType="Web Service" -apiKey="db63808c-8dc5-44b8-aad4-9821cc50a96b" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true || error=true
+./katalonc -noSplash -runMode=console -projectPath="$WORKSPACE/$projectPath" -reportFolder="/var/lib/jenkins/workspace/PublishReportToJira/Reports/$i" -reportFileName="report" -retry=0 -testSuitePath="$testSuitePath" -executionProfile="default" -browserType="Web Service" -apiKey="b44be0d6-c44f-450e-9815-e287f5bfcb10" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true || error=true
 
 
 

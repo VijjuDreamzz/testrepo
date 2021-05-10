@@ -12,6 +12,8 @@ git init
 git remote remove origin
 git remote add origin https://github.com/VijjuDreamzz/testrepo.git
 git pull origin master --allow-unrelated-histories
+cd MuleAPITest
+ls -lrt
 '''
 
 }

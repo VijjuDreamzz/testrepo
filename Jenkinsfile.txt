@@ -32,8 +32,8 @@ try {
 sh '''
 
 
-#SAVEIFS=$IFS # Save current IFS
-#IFS=$'\n' # Change IFS to new line
+SAVEIFS=$IFS # Save current IFS
+IFS=$'\n' # Change IFS to new line
 linesArr=($targetPath) # split to array $names
 IFS=$SAVEIFS # Restore IFS
 
@@ -42,10 +42,10 @@ do
 
 line=${linesArr[$i]}
 
-#SAVEIFS=$IFS # Save current IFS
-#IFS=$':' # Change IFS to new line
+SAVEIFS=$IFS # Save current IFS
+IFS=$':' # Change IFS to new line
 fields=($line) # split to array $names
-#IFS=$SAVEIFS # Restore IFS
+IFS=$SAVEIFS # Restore IFS
 projectPath=${fields[0]}"/"${fields[0]}".prj"
 testSuitePath="Test Suites"/${fields[1]}
 

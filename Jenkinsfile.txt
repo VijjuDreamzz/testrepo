@@ -15,10 +15,21 @@ git pull origin master --allow-unrelated-histories
 cd MuleApiTest
 ls -lrt
 '''
+}
+}
+stage ("Execute the test suite"){
+
+steps {
+
+script {
+
+
+try { 
+sh "automation.sh"
+}
+}
+}
+}
 
 }
-
 }
-}
-}
-

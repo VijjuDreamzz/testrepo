@@ -23,10 +23,8 @@ steps {
 
 script {
 
-
-try { 
 sh "automation.sh"
-}
+
 }
 }
 }

@@ -23,7 +23,7 @@ steps {
 
 script {
 
-sh "automation.sh"
+sh "ci/automation.sh"
 
 }
 }

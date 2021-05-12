@@ -1,13 +1,4 @@
-stage ("Execute the test suite"){
-
-steps {
-
-script {
-
-
-try { 
-
-sh '''
+#!/bin/bash
 
 targetPath=$WORKSPACE
 echo $targetPath
@@ -16,7 +7,7 @@ SAVEIFS=$IFS # Save current IFS
 linesArr=($targetPath) # split to array $names
 IFS=$SAVEIFS # Restore IFS
 
-for (( i=0; i<${#linesArr[@]}; i++ ))
+for (( i=0; i<${#linesArr[@]}; i++ ));
 do
 
 line=${linesArr[$i]}
@@ -45,27 +36,10 @@ done
 if [ $error ]
 then 
 
-echo "going to catch block"
+echo "proceeding with other test cases"
 exit 1
+
+else
+echo "success"
 fi
 
-'''
-
-} catch (err) {
-
-sh '''
-
-echo "proceeding with other test cases"
-
-'''
-
-} finally {
-
-echo "success"
-
-}
-}
-}
-}
-}
-}
